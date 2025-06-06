@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Appointment - MonVisaPro</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/appointment.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="logo">
+        <a href="/">
+          <span class="logo-text">MonVisaPro</span>
+        </a>
+      </div>
+      <nav>
+        <button id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="main-menu">
+          <li><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a href="#services">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="/services/usa.html">USA Visa</a></li>
+              <li><a href="/services/canada.html">Canada Visa</a></li>
+              <li><a href="/services/schengen.html">Schengen Visa</a></li>
+            </ul>
+          </li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li class="cta-button"><a href="/appointment.html" class="btn btn-primary active">Book Appointment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="appointment-hero">
+      <div class="container">
+        <div class="appointment-hero-content">
+          <h1>Book Your Consultation</h1>
+          <p>Take the first step toward your visa approval</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="appointment-form-section">
+      <div class="container">
+        <div class="appointment-grid">
+          <div class="appointment-form-container">
+            <h2>Schedule Your Appointment</h2>
+            <p>Fill out the form below to request a consultation with one of our visa experts.</p>
+            
+            <form id="appointment-form" class="appointment-form">
+              <div class="form-step" id="step1">
+                <h3>Step 1: Personal Information</h3>
+                
+                <div class="form-group">
+                  <label for="fullname">Full Name <span class="required">*</span></label>
+                  <input type="text" id="fullname" name="fullname" required>
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="nationality">Nationality <span class="required">*</span></label>
+                  <input type="text" id="nationality" name="nationality" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="residence">Country of Residence <span class="required">*</span></label>
+                  <input type="text" id="residence" name="residence" required>
+                </div>
+                
+                <div class="form-buttons">
+                  <button type="button" class="btn btn-primary next-step">Continue</button>
+                </div>
+              </div>
+              
+              <div class="form-step" id="step2" style="display: none;">
+                <h3>Step 2: Visa Information</h3>
+                
+                <div class="form-group">
+                  <label for="visa-type">Visa Type <span class="required">*</span></label>
+                  <select id="visa-type" name="visa-type" required>
+                    <option value="">Select a visa type</option>
+                    <optgroup label="USA Visas">
+                      <option value="usa-tourist">USA Tourist Visa (B-2)</option>
+                      <option value="usa-business">USA Business Visa (B-1)</option>
+                      <option value="usa-student">USA Student Visa (F-1)</option>
+                      <option value="usa-work">USA Work Visa (H-1B, L-1, etc.)</option>
+                    </optgroup>
+                    <optgroup label="Canada Visas">
+                      <option value="canada-visitor">Canada Visitor Visa</option>
+                      <option value="canada-student">Canada Study Permit</option>
+                      <option value="canada-work">Canada Work Permit</option>
+                    </optgroup>
+                    <optgroup label="Schengen Visas">
+                      <option value="schengen-tourist">Schengen Tourist Visa</option>
+                      <option value="schengen-business">Schengen Business Visa</option>
+                    </optgroup>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="travel-purpose">Purpose of Travel <span class="required">*</span></label>
+                  <textarea id="travel-purpose" name="travel-purpose" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="travel-date">Planned Travel Date</label>
+                    <input type="date" id="travel-date" name="travel-date">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="travel-duration">Planned Duration of Stay</label>
+                    <input type="text" id="travel-duration" name="travel-duration" placeholder="e.g., 2 weeks, 3 months">
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="previous-attempts">Previous Visa Applications/Attempts</label>
+                  <textarea id="previous-attempts" name="previous-attempts" rows="3" placeholder="Please provide details of any previous visa applications, including dates and outcomes."></textarea>
+                </div>
+                
+                <div class="form-buttons">
+                  <button type="button" class="btn btn-secondary prev-step">Back</button>
+                  <button type="button" class="btn btn-primary next-step">Continue</button>
+                </div>
+              </div>
+              
+              <div class="form-step" id="step3" style="display: none;">
+                <h3>Step 3: Appointment Details</h3>
+                
+                <div class="form-group">
+                  <label for="service-package">Service Package <span class="required">*</span></label>
+                  <select id="service-package" name="service-package" required>
+                    <option value="">Select a service package</option>
+                    <option value="basic">Basic Consultation</option>
+                    <option value="standard">Standard Package</option>
+                    <option value="premium">Premium Package</option>
+                    <option value="vip">VIP Service</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label>Preferred Consultation Method <span class="required">*</span></label>
+                  <div class="radio-group">
+                    <label class="radio-option">
+                      <input type="radio" name="consultation-method" value="video" required> Video Call
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="consultation-method" value="phone" required> Phone Call
+                    </label>
+                    <label class="radio-option">
+                      <input type="radio" name="consultation-method" value="in-person" required> In-Person
+                    </label>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="preferred-date">Preferred Date <span class="required">*</span></label>
+                  <input type="date" id="preferred-date" name="preferred-date" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="preferred-time">Preferred Time <span class="required">*</span></label>
+                  <select id="preferred-time" name="preferred-time" required>
+                    <option value="">Select a time slot</option>
+                    <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                    <option value="afternoon">Afternoon (1:00 PM - 5:00 PM)</option>
+                    <option value="evening">Evening (6:00 PM - 8:00 PM)</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="additional-notes">Additional Notes or Questions</label>
+                  <textarea id="additional-notes" name="additional-notes" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="terms" required>
+                    I agree to the <a href="/terms.html" target="_blank">Terms and Conditions</a> and <a href="/privacy.html" target="_blank">Privacy Policy</a> <span class="required">*</span>
+                  </label>
+                </div>
+                
+                <div class="form-buttons">
+                  <button type="button" class="btn btn-secondary prev-step">Back</button>
+                  <button type="submit" class="btn btn-primary">Submit Request</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          
+          <div class="appointment-info">
+            <div class="info-card">
+              <h3>Why Book a Consultation?</h3>
+              <ul class="benefits-list">
+                <li><i class="fas fa-check-circle"></i> Personalized visa strategy based on your profile</li>
+                <li><i class="fas fa-check-circle"></i> Expert advice on document preparation</li>
+                <li><i class="fas fa-check-circle"></i> Identification of potential issues before application</li>
+                <li><i class="fas fa-check-circle"></i> Answers to all your visa-related questions</li>
+                <li><i class="fas fa-check-circle"></i> Clear roadmap for your visa journey</li>
+              </ul>
+            </div>
+            
+            <div class="info-card">
+              <h3>What to Expect</h3>
+              <p>After submitting your appointment request:</p>
+              <ol class="steps-list">
+                <li>You'll receive an email confirmation within 24 hours</li>
+                <li>A visa consultant will contact you to confirm your appointment</li>
+                <li>You'll receive a pre-consultation checklist to prepare</li>
+                <li>During your consultation, we'll assess your visa eligibility and create a customized plan</li>
+                <li>Following the consultation, you'll receive a detailed action plan</li>
+              </ol>
+            </div>
+            
+            <div class="info-card">
+              <h3>Need Immediate Assistance?</h3>
+              <p>For urgent inquiries or questions about our services:</p>
+              <div class="contact-options">
+                <a href="tel:+15551234567" class="contact-option">
+                  <i class="fas fa-phone"></i>
+                  <span>Call Us</span>
+                </a>
+                <a href="https://wa.me/15551234567" class="contact-option" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-whatsapp"></i>
+                  <span>WhatsApp</span>
+                </a>
+                <a href="mailto:info@monvisapro.com" class="contact-option">
+                  <i class="fas fa-envelope"></i>
+                  <span>Email Us</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="testimonials appointment-testimonials">
+      <div class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="appointment-testimonial-slider" id="appointment-testimonial-slider">
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"The initial consultation was incredibly informative. My consultant identified issues with my previous application that I hadn't even considered. Their guidance was invaluable!"</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>James Wilson</h4>
+                <p>USA Business Visa</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>"I was skeptical about paying for consultation, but it was worth every penny. My consultant's attention to detail and personalized advice made all the difference in my successful application."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Elena Petrova</h4>
+                <p>Schengen Tourist Visa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button id="prev-appointment-testimonial" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+          <button id="next-appointment-testimonial" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <span class="logo-text">MonVisaPro</span>
+          </div>
+          <p>Professional visa consultation services to make your international travel dreams a reality.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services/usa.html">USA Visa</a></li>
+            <li><a href="/services/canada.html">Canada Visa</a></li>
+            <li><a href="/services/schengen.html">Schengen Visa</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@monvisapro.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Visa Street, Suite 456<br>New York, NY 10001</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MonVisaPro. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="appointment-success" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="success-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h2>Appointment Request Submitted!</h2>
+      <p>Thank you for choosing MonVisaPro. We have received your appointment request and will contact you within 24 hours to confirm your consultation.</p>
+      <p>A confirmation email has been sent to your email address.</p>
+      <button class="btn btn-primary close-btn">Close</button>
+    </div>
+  </div>
+
+  <div class="whatsapp-button">
+    <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/appointment.js"></script>
+</body>
+</html>
